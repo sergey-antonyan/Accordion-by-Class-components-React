@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color:  #c2b490;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  width: 90%;
+  margin: 20px auto;
+
 }
+
+h1 {
+  text-align: center;
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 10px auto;
+  background-color: #c2b490;
+}
+
+.accordion-item {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+
+.btn{
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 5px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: #acb7ae;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0,8);
+} 
+
+.btnContainer {
+  display:grid;
+  grid-auto-flow:column dense; /* column flow with "dense" to fill all the cells */
+  grid-template-rows:50px 50px; /* 2 rows */
+  grid-auto-columns:100px;
+  margin-left: 100px;
+}
+.btnContainer span:nth-child(4n + 2) { /* this will do the trick*/
+   grid-row:1; /* we make 2 in the first row and 3 will be pushed to second row */
+}
+
